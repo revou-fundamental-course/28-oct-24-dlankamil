@@ -1,0 +1,160 @@
+/* Ini CSS */
+
+* {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+  background-color: royalblue;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav .sosmed{
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav .sosmed > a{
+  position: relative;
+  display: inline-block;
+}
+
+nav .sosmed > a .tooltip-text{
+  visibility: hidden;
+  width: 90px;
+  color: #fff;
+  text-align: center;
+  font-size: .8rem !important;
+  font-weight: 500 !important;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 140%;
+  left: 130%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+nav .sosmed > a .instagram{
+  background-color: #C13584;
+}
+
+nav .sosmed > a .github{
+  background-color: #171515;
+}
+
+nav .sosmed > a .instagram::after{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #C13584 transparent;
+}
+
+nav .sosmed > a .github::after{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #171515 transparent;
+}
+
+nav .sosmed > a:hover .tooltip-text{
+  visibility: visible;
+  opacity: 1;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  flex: 1/1;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.color-section {
+  background-color: lavender;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+input[type='number'],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type='submit'] {
+    border: 1px solid royalblue;
+    background-color: rgb(65, 105, 225);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+button[type='submit']:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 2px 2px 7px rgba(65, 105, 225, .3);
+}
+
+button[type='button'] {
+    border: 1px solid grey;
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+button[type='button']:hover {
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, .1);
+}
+
+.text-center {
+  text-align: center;
+}
+
+#result {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: royalblue;
+  color: white;
+  padding: .8rem;
+  border-radius: .8rem .8rem 0 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  main{
+    flex-direction: column;
+  }
+}
